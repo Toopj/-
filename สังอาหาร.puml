@@ -1,0 +1,27 @@
+@startuml
+actor : buy: as stu 
+
+
+
+(Choose a delivery person) as UC1 
+(Choose a menu) as UC2 
+(Buy food) as UC3 
+(Promotion) as UC4
+(Can't come) as UC5
+(NO item) as UC6
+(Not enough money) as UC7
+(coupon) as UC8
+
+
+
+
+UC1 --|> UC2 : <<uses >>
+UC2 --|> UC3 : <<uses >>
+UC3 <|-- UC7 : <<extends >>
+UC3 <|-- UC4 : <<extends >>
+UC2 <|-- UC6 : <<extends >>
+UC1 <|-- UC5 : <<extends >>
+UC3 <|-- UC8 : <<extends >>
+
+stu --> UC1
+@enduml

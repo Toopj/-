@@ -1,0 +1,25 @@
+@startuml
+actor : Driver : as stu 
+
+(Travel) as UC1 
+(Check room) as UC2 
+(Check the car) as UC3 
+(Check route) as UC4
+(No room) as UC6
+(Not enough money) as UC7
+(Broken car) as UC8
+(Check route) as UC9
+(No oil) as UC10
+
+
+UC1 --|> UC2 : <<uses >>
+UC1 --|> UC3 : <<uses >>
+UC1 --|> UC4 : <<uses >>
+UC2 <|-- UC6 : <<extends >>
+UC2 <|-- UC7 : <<extends >>
+UC3 <|-- UC8 : <<extends >>
+UC3 <|-- UC10 : <<extends >>
+UC4 <|-- UC9 : <<extends >>
+
+stu --> UC1
+@enduml

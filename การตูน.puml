@@ -1,0 +1,31 @@
+@startuml
+actor : Renters : as stu 
+
+
+
+(Book Queue Cartoon) as UC1 
+(Rent a cartoon) as UC2 
+(buy cartoon) as UC3 
+(Book night) as UC4
+(Check booking) as UC5
+(Check price) as UC6
+(No item) as UC7
+(Not enough money) as UC8
+(Cartoon condition) as UC9
+(Overdue date) as UC10
+
+
+UC1 --|> UC5 : <<uses >>
+UC2 --|> UC5 : <<uses >>
+UC3 --|> UC6 : <<uses >>
+UC5 <|-- UC7 : <<extends >>
+UC6 <|-- UC8 : <<extends >>
+UC6 <|-- UC7 : <<extends >>
+UC4 <|-- UC10 : <<extends >>
+UC4 <|-- UC9 : <<extends >>
+
+stu --> UC1
+stu --> UC2
+stu --> UC3
+stu --> UC4
+@enduml
